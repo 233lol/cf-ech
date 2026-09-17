@@ -1,0 +1,23 @@
+[Unit]
+Description=cf-ech DNS Proxy with Cloudflare ECH Injection
+Documentation=https://github.com/your-username/cf-ech
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/cf-ech -listen :5353
+Restart=always
+RestartSec=5
+LimitNOFILE=1024
+
+ReadWritePaths=/var/log
+PrivateTmp=true
+
+# 日志设置
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=cf-ech
+
+[Install]
+WantedBy=multi-user.target
