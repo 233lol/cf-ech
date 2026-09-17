@@ -1,6 +1,6 @@
 [Unit]
 Description=cf-ech DNS Proxy with Cloudflare ECH Injection
-Documentation=https://github.com/your-username/cf-ech
+Documentation=https://github.com/233lol/cf-ech
 After=network.target
 Wants=network-online.target
 
