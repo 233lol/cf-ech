@@ -1,0 +1,265 @@
+Provider,URL,Protocols,Filtering,DNSSEC,NoLogging,Upstream,Comment
+AdFilter,https://per.adfilter.net/dns-query,"DoH, DoT",广告过滤,No,否（保留30天统计）,自有,"Perth服务器，聚合统计保留30天"
+AdFilter,https://adl.adfilter.net/dns-query,"DoH, DoT",广告过滤,No,否（保留30天统计）,自有,"Adelaide服务器"
+Adfreedns,https://adfreedns.top/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,广告过滤
+AdGuard,https://dns.adguard-dns.com/dns-query,"DoH, DoT, DoQ",广告过滤,Yes,未知,自有,"Default: DNS级别广告过滤，TLS 1.3"
+AdGuard,https://family.adguard-dns.com/dns-query,"DoH, DoT, DoQ","广告过滤, 家庭保护",Yes,未知,自有,"Family: 额外屏蔽成人网站"
+AdGuard,https://unfiltered.adguard-dns.com/dns-query,"DoH, DoT, DoQ",无过滤,Yes,未知,自有,"Uncensored: 无过滤版本"
+AliDNS,https://dns.alidns.com/dns-query,"DoH, DoT, DoQ",无过滤,No,未知,自有,阿里DNS
+Andrews & Arnold,https://dns.aa.net.uk/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"无日志，隐私声明"
+Angry.im,https://doh.angry.im/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，OpenNIC"
+anon.no,https://dns.anon.no/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,AdGuard,"使用AdGuard浏览安全服务"
+applewebkit.dev,https://dns.applewebkit.dev/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+Aquilenet DNS,https://dns.aquilenet.fr/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,"法国非营利ISP，IPv4+IPv6"
+arnor.org,https://nsec.arnor.org/dns-query,"DoH, DoT, DoQ, DoH3","广告过滤, 恶意软件, 钓鱼",Yes,部分（仅记录过滤URL）,自有,"DNSSEC强制，隐私重定向"
+Asteri Moon,https://dns.asterimoon.com/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+a47.me,https://dns.a47.me/dns-query,DoH,无过滤,No,未知,未知,
+bazooki-infra.dev,https://bazooki-infra.dev/dns-query,DoH,无过滤,No,未知,未知,
+Belnet,https://dns.belnet.be/dns-query,DoH,无过滤,No,未知,未知,
+Ben Hocking,https://dns.bmwhocking.com/dns-query,DoH,无过滤,No,未知,未知,
+BITServices,https://dns.bitservices.io/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+Blokada DNS,https://dns.blokada.org/dns-query,"DoH, DoT",无过滤,No,是,自有,无日志
+Blue Shield Umbrella,https://rfree1.blue-shield.at/dns-query,"DoH, DoT",无过滤,No,未知,自有,服务器1
+Blue Shield Umbrella,https://rfree2.blue-shield.at/dns-query,"DoH, DoT",无过滤,No,未知,自有,服务器2
+brembeck.cloud,https://dns.brembeck.cloud/dns-query,DoH,"广告过滤, 成人内容过滤",No,未知,AdGuard,"使用AdGuard家长控制服务"
+busold.ws,https://dns.busold.ws/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+Canarypwn,https://doh.aaaab3n.moe/dns-query-114514,DoH,无过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+caspervk.net,https://dns.caspervk.net/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+CERT Estonia,https://dns.cert.ee/dns-query,"DoH, DoT","恶意软件, 钓鱼, 成人内容, 赌博",No,未知,自有,"钓鱼、恶意软件、色情和赌博过滤"
+Charter,https://doh-01.spectrum.com/dns-query,DoH,无过滤,No,未知,未知,
+Charter,https://doh-02.spectrum.com/dns-query,DoH,无过滤,No,未知,未知,
+chenu.ch,https://dns.chenu.ch/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+Christer Warén,https://dns.christerwaren.fi,"DoH, DoT",无过滤,No,未知,未知,
+ChunghwaMC,https://dns.chunghwamc.com/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+CIRA Canadian Shield,https://private.canadianshield.cira.ca/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,"加拿大境内DNS流量，隐私保护"
+CIRA Canadian Shield,https://protected.canadianshield.cira.ca/dns-query,"DoH, DoT","恶意软件, 钓鱼",Yes,未知,自有,"包含恶意软件和钓鱼拦截"
+CIRA Canadian Shield,https://family.canadianshield.cira.ca/dns-query,"DoH, DoT","成人内容过滤, 家庭保护",Yes,未知,自有,"包含成人内容拦截"
+Cisco Umbrella,https://doh.opendns.com/dns-query,DoH,无过滤,Yes,未知,自有,"DNSSEC，Anycast"
+Cisco Umbrella,https://doh.familyshield.opendns.com/dns-query,DoH,成人内容过滤,Yes,未知,自有,"FamilyShield: 屏蔽成人内容"
+Cisco Umbrella,https://doh.umbrella.com/dns-query,DoH,无过滤,Yes,未知,自有,Umbrella版本
+CleanBrowsing,https://doh.cleanbrowsing.org/doh/family-filter/,"DoH, DoT",家庭保护,No,未知,自有,"家长控制，强制安全搜索"
+CleanBrowsing,https://doh.cleanbrowsing.org/doh/adult-filter/,"DoH, DoT",成人内容过滤,No,未知,自有,"允许部分混合内容网站"
+CleanBrowsing,https://doh.cleanbrowsing.org/doh/security-filter/,"DoH, DoT",恶意软件拦截,No,未知,自有,"仅恶意软件拦截"
+CleverAdmin,https://dns1.techniverse.net/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,广告过滤
+Cloudflare,https://cloudflare-dns.com/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,"支持-04和-13内容类型"
+Cloudflare,https://mozilla.cloudflare-dns.com/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,Mozilla专用
+Cloudflare,https://security.cloudflare-dns.com/dns-query,"DoH, DoT",恶意软件拦截,Yes,未知,自有,拦截恶意软件
+Cloudflare,https://family.cloudflare-dns.com/dns-query,"DoH, DoT","恶意软件, 成人内容过滤",Yes,未知,自有,"拦截恶意软件和成人内容"
+Cloudflare,https://dns64.cloudflare-dns.com/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,DNS64版本
+Comss.one DNS,https://dns.comss.one/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,"基于SmartDNS，访问AI服务"
+Control D,https://freedns.controld.com/p0,DoH,无过滤,No,未知,自有,无过滤版本
+Control D,https://freedns.controld.com/p1,DoH,恶意软件拦截,No,未知,自有,拦截恶意软件
+Control D,https://freedns.controld.com/p2,DoH,"广告过滤, 恶意软件",No,未知,自有,"拦截恶意软件+广告和跟踪"
+Control D,https://freedns.controld.com/p3,DoH,"广告过滤, 恶意软件, 社交媒体",No,未知,自有,"拦截+社交媒体"
+Control D,https://freedns.controld.com/family,DoH,"广告过滤, 恶意软件, 成人内容, 家庭保护",No,未知,自有,"家庭友好版本"
+Control D,https://freedns.controld.com/uncensored,DoH,无过滤,No,未知,自有,解除审查版本
+Control D,https://freedns.controld.com/x-oisd,DoH,广告过滤,No,未知,自有,"OISD完整版过滤器"
+Control D,https://freedns.controld.com/x-oisd-basic,DoH,广告过滤,No,未知,自有,"OISD基础版过滤器"
+Control D,https://freedns.controld.com/x-stevenblack,DoH,广告过滤,No,未知,自有,"StevenBlack统一过滤器"
+Control D,https://freedns.controld.com/x-devdan,DoH,广告过滤,No,未知,自有,"Dev Dan's Hosts过滤器"
+Control D,https://freedns.controld.com/x-1hosts-mini,DoH,广告过滤,No,未知,自有,"1Hosts迷你版"
+Control D,https://freedns.controld.com/x-1hosts-lite,DoH,广告过滤,No,未知,自有,"1Hosts轻量版"
+Control D,https://freedns.controld.com/x-1hosts-pro,DoH,广告过滤,No,未知,自有,"1Hosts专业版"
+Control D,https://freedns.controld.com/x-hagezi-light,DoH,广告过滤,No,未知,自有,"Hagezi轻量版"
+Control D,https://freedns.controld.com/x-hagezi-normal,DoH,广告过滤,No,未知,自有,"Hagezi标准版"
+Control D,https://freedns.controld.com/x-hagezi-pro,DoH,广告过滤,No,未知,自有,"Hagezi专业版"
+Control D,https://freedns.controld.com/x-hagezi-proplus,DoH,广告过滤,No,未知,自有,"Hagezi专业增强版"
+Control D,https://freedns.controld.com/x-hagezi-ultimate,DoH,广告过滤,No,未知,自有,"Hagezi终极版"
+Control D,https://freedns.controld.com/x-hagezi-tif,DoH,广告过滤,No,未知,自有,"Hagezi威胁情报版"
+Control D,https://freedns.controld.com/x-goodbyeads,DoH,广告过滤,No,未知,自有,"GoodbyeAds过滤器"
+Control D,https://freedns.controld.com/x-adguard,DoH,广告过滤,No,未知,自有,"AdGuard过滤器"
+CynthiaLabs,https://dns.cynthialabs.net/dns-query,DoH,广告过滤,No,未知,自有,广告过滤
+CZ.NIC,https://odvr.nic.cz/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,"运行在Knot Resolver，.cz TLD运营商"
+data.haus,https://ns.data.haus/dns-query,"DoH, DoT",广告过滤,No,是,自有,"无日志，广告过滤"
+datenquark.de,https://dns.datenquark.de/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+dev-umbrellagov,https://dns.dev-umbrellagov.com/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+Digitale Gesellschaft,https://dns.digitale-gesellschaft.ch/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"无日志，无过滤，QNAME最小化"
+Disconnect.app,https://doh.disconnect.app/dns-query,DoH,无过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+dns.digitalsize.net,https://dns.digitalsize.net/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"无跟踪，无过滤，德国托管"
+DNS.SB,https://doh.dns.sb/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"DNSSEC，QNAME最小化，无日志"
+DNS4all,https://doh.dns4all.eu/dns-query,"DoH, DoT, DoQ",无过滤,No,是,自有,无日志
+DNS4EU,https://protective.joindns4.eu/dns-query,"DoH, DoT",无过滤,No,匿名化日志,自有,"欧盟共同资助"
+DNS4EU,https://child.joindns4.eu/dns-query,"DoH, DoT",家庭保护,No,匿名化日志,自有,"包含儿童保护"
+DNS4EU,https://noads.joindns4.eu/dns-query,"DoH, DoT",广告过滤,No,匿名化日志,自有,"广告过滤版本"
+DNS4EU,https://child-noads.joindns4.eu/dns-query,"DoH, DoT","广告过滤, 家庭保护",No,匿名化日志,自有,"广告过滤+儿童保护"
+DNS4EU,https://unfiltered.joindns4.eu/dns-query,"DoH, DoT",无过滤,No,匿名化日志,自有,无过滤版本
+dns4me,https://ca01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,加拿大服务器1
+dns4me,https://ca02.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,加拿大服务器2
+dns4me,https://us01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,美国服务器1
+dns4me,https://us02.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,美国服务器2
+dns4me,https://sg01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,新加坡服务器
+dns4me,https://sa01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,沙特服务器
+dns4me,https://au01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,澳大利亚服务器
+dns4me,https://uk01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,英国服务器
+dns4me,https://nz01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,新西兰服务器
+dns4me,https://ie01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,爱尔兰服务器
+dns4me,https://de01.dns4me.net,"DoH, DoT",无过滤,No,未知,未知,德国服务器
+dns.flatuslifir.is,https://dns.flatuslifir.is/dns-query,"DoH, DoT",无过滤,No,是,自有,"无日志，无过滤"
+dnsforge.de,https://dnsforge.de/dns-query,"DoH, DoT, DoQ",广告过滤,Yes,是,自有,"无日志，DNSSEC，德国托管"
+dnsforge.de,https://clean.dnsforge.de/dns-query,"DoH, DoT, DoQ","广告过滤, 成人内容过滤",Yes,是,自有,"广告和色情拦截"
+dnsforge.de,https://hard.dnsforge.de/dns-query,"DoH, DoT, DoQ",广告过滤,Yes,是,自有,严格过滤版本
+dnsHome.de,https://dns.dnshome.de/dns-query,"DoH, DoH3, DoT, DoQ, DNSCrypt",无过滤,No,是,自有,"无日志，无拦截"
+dnslow.me,https://dnslow.me/dns-query,"DoH, DoT","广告过滤, 恶意软件, 跟踪器, 钓鱼",No,未知,自有,"随机转发到不同上游以增强隐私"
+DNS over Tor,https://japan.dnsovertor.cc/dns-query,DoH,无过滤,No,未知,未知,日本服务器
+DNS over Tor,https://chuncheon.dns.dnsovertor.cc/dns-query,DoH,无过滤,No,未知,未知,春川服务器
+DNS over Tor,https://seoul.dnsovertor.cc/dns-query,DoH,无过滤,No,未知,未知,首尔服务器
+DNSPod,https://dns.pub/dns-query,"DoH, DoT",无过滤,No,未知,腾讯云,"腾讯云运营"
+doh.beauty,https://doh.beauty,DoH,无过滤,No,未知,未知,
+doh.buzz,https://doh.buzz/dns-query,DoH,无过滤,No,未知,未知,
+domreg.lt,https://doh.domreg.lt/dns-query,"DoH, DoT","成人内容过滤, 赌博过滤",No,未知,自有,"色情和赌博拦截"
+dshubham.xyz,https://agh.dshubham.xyz/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,广告过滤
+Dukun.de,https://dukun.de/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+duröhre.de,https://xn--durhre-yxa.de/dns-query,DoH,无过滤,No,未知,未知,
+d94.xyz,https://dns.d94.xyz/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+Easy HNS,https://dns.easyhns.com/dns-query,"DoH, DoT",无过滤,No,未知,自有,"支持Handshake域名解析"
+Elemental Software,https://dns.elemental.software/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+envs.net,https://dns.envs.net/dns-query,DoH,无过滤,No,未知,未知,
+faked.org,https://dns.faked.org/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,广告过滤
+familiamv.net,https://dnsvps.familiamv.net/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+farshidhakimy.de,https://dns.farshidhakimy.de/dns-query,"DoH, DoT",广告过滤,No,未知,AdGuard,"使用AdGuard浏览安全服务"
+FDN,https://ns0.fdn.fr/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"无日志，无过滤，DNSSEC"
+FDN,https://ns1.fdn.fr/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"无日志，无过滤，DNSSEC"
+Feroz,https://doh.li/dns-query,DoH,无过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+ffmuc.net,https://doh.ffmuc.net/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"无日志，无过滤，OpenNIC"
+fidelius.top,https://fidelius.top/dns-query,DoH,无过滤,No,未知,未知,
+floriantinney.de,https://dns.floriantinney.de/dns-query,"DoH, DoT",广告过滤,No,未知,AdGuard,"使用AdGuard浏览安全服务"
+Foundation for Applied Privacy,https://doh.applied-privacy.net/query,"DoH, DoT",无过滤,Yes,是,自有,"无日志，无过滤，QNAME最小化"
+Foxyfy DNS,https://es-ma.foxyfy.net/dns-query,DoH,无过滤,No,未知,自有,"公共DoH服务"
+FurrIX vIX,https://dns.furrix.zone/dns-query,"DoH, DoT",无过滤,No,未知,自有,"OpenNIC兼容，IPv4/IPv6"
+FutaDNS,https://doh.futa.gg/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+Gamban,https://dns.gamban.com/dns-query,DoH,无过滤,No,未知,未知,
+gibblets.top,https://gibblets.top/dns-query,DoH,无过滤,No,未知,未知,
+glacius.top,https://glacius.top/dns-query,DoH,无过滤,No,未知,未知,
+Google,https://dns.google/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,"完整RFC 8484支持，EDNS"
+Google,https://dns64.dns.google/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,DNS64版本
+Google,https://8888.google/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,备用地址
+Gottlieb Freitag,https://dns.glf.wtf/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+Guardio,https://dns.guard.io/dns-query,DoH,无过滤,No,未知,未知,
+Hafnova,https://secure.hafnova.com/dns-query,DoH,无过滤,No,未知,未知,
+HaGeZi DNS,https://root.hagezi.org/dns-query,DoH,广告过滤,No,未知,自有,"德国Falkenstein，安全过滤"
+HaGeZi DNS,https://wurzn.hagezi.org/dns-query,DoH,广告过滤,No,未知,自有,"德国Nuremberg"
+HaGeZi DNS,https://juuri.hagezi.org/dns-query,DoH,广告过滤,No,未知,自有,"芬兰Helsinki"
+Hakase,https://dns.haka.se/dns-query,DoH,广告过滤,No,未知,自有,广告过滤
+HNS DoH,https://hnsdoh.com/dns-query,"DoH, DoT",无过滤,No,未知,自有,"支持Handshake域名解析"
+Hostux.net,https://dns.hostux.net/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"DNSSEC，无EDNS客户端子网"
+Hostux.net,https://dns.hostux.net/ads,"DoH, DoT",广告过滤,Yes,是,自有,"广告拦截版本"
+Huque,https://doth.huque.com/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+imperio.top,https://imperio.top/dns-query,DoH,无过滤,No,未知,未知,
+In-Berlin,https://dns1.in-berlin.de/dns-query,"DoH, DoT",无过滤,No,未知,未知,服务器1
+In-Berlin,https://dns2.in-berlin.de/dns-query,"DoH, DoT",无过滤,No,未知,未知,服务器2
+Inforlogia,https://dns.inforlogia.com/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+Internet Initiative Japan,https://public.dns.iij.jp/dns-query,"DoH, DoT",无过滤,No,未知,自有,"计划运行至2027年3月"
+kapite.in,https://dns.kapite.in/dns-query,"DoH, DoT, DoQ","广告过滤, 赌博过滤",No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+Kernel Error,https://dns.kernel-error.de/dns-query,"DoH, DoT, DoQ",无过滤,Yes,未知,自有,"DNSSEC验证"
+kescher,https://dns.kescher.at/dns-query,"DoH, DoT, DoQ",无过滤,Yes,未知,自有,"DNSSEC验证"
+Koala,https://dns.koala.us.to/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+Kosan,https://dns.kosan.moe/dns-query,DoH,广告过滤,No,未知,自有,广告过滤
+krctech.dev,https://adblock.krctech.dev/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+La Contre-Voie,https://doh.lacontrevoie.fr/dns-query,DoH,无过滤,Yes,是,自有,"无日志，DNSSEC，法国托管"
+Liberador.net,https://dns.liberador.net,"DoH, DoT",无过滤,No,未知,未知,
+LibreDNS,https://doh.libredns.gr/dns-query,"DoH, DoT",无过滤,No,是,自有,"无日志，OpenNIC"
+LibreDNS,https://doh.libredns.gr/noads,"DoH, DoT",广告过滤,No,是,自有,"广告拦截版本"
+loadlow.me,https://loadlow.me/dns-query,DoH,无过滤,No,未知,未知,
+LobbyGod,https://dns.lobbygod.com/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+LuMa Medien,https://dns.luma-medien.com/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,AdGuard,"使用AdGuard浏览安全服务"
+l337.site,https://dns.l337.site/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,广告过滤
+marasov.id,https://dns.marasov.id/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+Masters of Cloud,https://masters-of-cloud.de/dns-query,"DoH, DoT",无过滤,No,未知,自有,"OpenNIC"
+mateo.ovh,https://dns.mateo.ovh/dns-query,"DoH, DoT, DoQ","广告过滤, 成人内容过滤",No,未知,Cloudflare,"使用Cloudflare上游，AdGuard"
+Mayx,https://dns.mayx.eu.org/dns-query,DoH,无过滤,No,未知,未知,
+meddy94.de,https://adguard.meddy94.de/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+mh4ckt3mh4ckt1c4s.xyz,https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+m-it.ro,https://addns1.m-it.ro/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，AdGuard"
+mmmalia.com,https://doh.mmmalia.com/dns-query,DoH,"广告过滤, 成人内容过滤",No,未知,AdGuard,"使用AdGuard家长控制服务"
+mydns.network,https://freedom.mydns.network/dns-query,"DoH, DoT",无过滤,No,未知,Cloudflare,"Cloudflare Workers驱动"
+mydns.network,https://paranoia.mydns.network/dns-query,"DoH, DoT",无过滤,No,未知,Cloudflare,"无Google/Cloudflare上游"
+mydns.network,https://adblock.mydns.network/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,广告拦截版本
+mydns.network,https://family.mydns.network/dns-query,"DoH, DoT",家庭保护,No,未知,Cloudflare,家庭保护版本
+MZJ Technology,https://dns.mzjtechnology.com/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+nashkan.net,https://ae-fuj-w-p-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://ae-fuj-w-p-2.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://ae-fuj-w-p-3.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://au-syd-w-f-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://gb-lon-w-p-2.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://ro-buc-w-p-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://sg-w-p-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://us-chi-w-f-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://us-chi-w-p-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://us-jac-w-f-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://us-jac-w-p-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://us-kan-w-p-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+nashkan.net,https://us-nyc-w-p-1.nashkan.net/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+neeb.it,https://dns.neeb.it/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+NextDNS,https://dns.nextdns.io,"DoH, DoT, DoQ",无过滤,No,未知,自有,"云私有DNS服务，免费300k查询/月"
+Nick Slowinski,https://dns.nick-slowinski.de/dns-query,DoH,广告过滤,No,未知,自有,广告过滤
+NIC.LV,https://doh.lv/dns-query,"DoH, DoT",无过滤,No,未知,自有,".lv TLD注册局运营"
+NIC.LV,https://doh.nic.lv/dns-query,"DoH, DoT",无过滤,No,未知,自有,".lv TLD注册局运营"
+Nicolas Dorriere,https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query,DoH,广告过滤,Yes,是,自有,"自托管法国，DNSSEC，无日志"
+NiYaWe,https://doh.niyawe.de/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+Njalla,https://dns.njal.la/dns-query,DoH,无过滤,No,是,自有,"无日志，瑞典"
+novg.net,https://dns.novg.net/dns-query,DoH,无过滤,No,未知,未知,
+Omada,https://dns.omada.cafe/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+OpenBLD.net,https://ada.openbld.net/dns-query,"DoH, DoT","广告过滤, 恶意软件",No,未知,自有,"TLSv1.3，无DNS泄漏"
+OpenLoop,https://ag.apollohct.com/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+o2cloud.fr,https://dns4eu.online/dns-query,DoH,无过滤,No,未知,未知,
+PaesaDNS,https://dns.paesa.es/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，恶意软件过滤"
+Paulo,https://dns.paulo.nom.za/dns-query,DoH,无过滤,No,未知,未知,
+Pavol Decky,https://dns.decky.eu/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+plan9-dns,https://kronos.plan9-dns.com/dns-query,DoH,无过滤,No,未知,未知,New Jersey服务器
+plan9-dns,https://helios.plan9-dns.com/dns-query,DoH,无过滤,No,未知,未知,Mexico服务器
+PlumeDNS,https://privacy.plumedns.com/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+pooblet.co.za,https://pooblet.co.za/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+Practically Unhackable,https://dns.practicallyunhackable.com/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+Quad9,https://dns.quad9.net/dns-query,"DoH, DoT",恶意软件拦截,Yes,未知,自有,"9.9.9.9: 威胁拦截，DNSSEC验证"
+Quad9,https://dns9.quad9.net/dns-query,"DoH, DoT",恶意软件拦截,Yes,未知,自有,"9.9.9.9别名"
+Quad9,https://dns10.quad9.net/dns-query,"DoH, DoT",无过滤,No,未知,自有,"9.9.9.10: 无威胁拦截"
+Quad9,https://dns11.quad9.net/dns-query,"DoH, DoT",恶意软件拦截,Yes,未知,自有,"9.9.9.11: 恶意软件拦截+ECS"
+Quad9,https://dns12.quad9.net/dns-query,"DoH, DoT",无过滤,No,未知,自有,"9.9.9.12: 无威胁拦截+ECS"
+Quiet Rocks,https://dns.quiet.rocks/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+QWER DNS,https://dog.dns.qwer.pw/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+QWER DNS,https://tiger.dns.qwer.pw/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+redhosting.com.ar,https://dns.redhosting.com.ar/dns-query,"DoH, DoT","广告过滤, 赌博过滤",No,未知,Cloudflare,"使用Cloudflare上游"
+regiopolis.cloud,https://regiopolis.cloud/dns-query,DoH,无过滤,No,未知,未知,
+Restena,https://dnspub.restena.lu/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,"DNSSEC验证"
+RetakeCS,https://dns.retakecs.com/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,AdGuard,"使用AdGuard浏览安全服务"
+RethinkDNS,https://sky.rethinkdns.com/dns-query,"DoH, DoT",无过滤,No,是,自有,"开源，200+位置，无ECS"
+RethinkDNS,https://sky.rethinkdns.com/1:IAAgAA==,"DoH, DoT",广告过滤,No,是,自有,"OISD过滤器版本"
+revelio.top,https://revelio.top/dns-query,DoH,无过滤,No,未知,未知,
+RobinGroppe.de,https://dns.rbn.gr/dns-query,"DoH, DoT",恶意软件拦截,Yes,未知,自有,"DNSSEC验证"
+roedel.cloud,https://dns.roedel.cloud/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,广告过滤
+SafeServe,https://safeservedns.com/dns-query,"DoH, DoT",无过滤,No,未知,自有,"Namecheap运营"
+shoupperuser.com,https://adguard.shoupperuser.com/dns-query,"DoH, DoT","广告过滤, 成人内容过滤",No,未知,AdGuard,"使用AdGuard家长控制服务"
+silen.org,https://dns.silen.org/dns-query,DoH,广告过滤,No,未知,自有,广告过滤
+simplylinux.ch,https://dns.simplylinux.ch/dns-query,"DoH, DoT, DoQ",无过滤,No,未知,未知,
+skrep.eu,https://dns.skrep.eu/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,"OpenNIC，广告过滤"
+Slinkyman.net,https://dns.slinkyman.net/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+SmartGuard,https://dns.smartguard.io/dns-query,"DoH, DoT",无过滤,No,未知,自有,"可自定义策略和过滤"
+Startup Stack,https://dns.startupstack.tech/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+SZ DNS,https://doh.sz-dns.com/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,自有,广告过滤
+stirringphoto.com,https://dns.stirringphoto.com/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+Surfshark DNS,https://dns.surfsharkdns.com/dns-query,"DoH, DoT, DoQ",无过滤,No,未知,未知,
+Sunet DNS,https://resolver.sunet.se/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+Switch,https://dns.switch.ch/dns-query,"DoH, DoT","成人内容过滤, 赌博过滤",No,未知,自有,"色情和赌博拦截"
+t53.de,https://dns.t53.de/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+Telekom Deutschland,https://dns.telekom.de/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+TipsyCoffee,https://dns.tipsy.coffee/dns-query,"DoH, DoT","广告过滤, 赌博过滤",No,未知,自有,"广告和赌博拦截"
+Tls-data.de,https://dns.tls-data.de/dns-query,DoH,无过滤,No,未知,未知,
+Tiarap,https://doh.tiar.app/dns-query,DoH,"广告过滤, 恶意软件, 钓鱼",Yes,是,自有,"无日志，DNSSEC验证，无ECS"
+UncensoredDNS,https://anycast.uncensoreddns.org/dns-query,"DoH, DoT, DoQ",无过滤,No,未知,自有,无过滤版本
+unx.io,https://dns.unx.io/dns-query,"DoH, DoT",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+Usable Privacy,https://adfree.usableprivacy.net/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+v.recipes,https://v.recipes/dns-query,DoH,无过滤,No,未知,自有,"Anycast网络，DoH3"
+v.recipes,https://v.recipes/dns-adblock,DoH,广告过滤,No,未知,自有,广告拦截版本
+v.recipes,https://v.recipes/dns-ecs,DoH,无过滤,No,未知,自有,"ECS优化版本"
+vaioswolke.xyz,https://dns.vaioswolke.xyz/dns-query,DoH,无过滤,No,未知,未知,
+VIA,https://doh.viatech.com.tw/dns-query,DoH,广告过滤,No,未知,Cloudflare,"使用Cloudflare上游"
+v0dka.ru,https://v0dka.ru/dns-query,DoH,无过滤,No,是,自有,"俄罗斯，无日志，无过滤"
+waringer-atg.de,https://abel.waringer-atg.de/dns-query,DoH,无过滤,No,未知,未知,
+Wikimedia DNS,https://wikimedia-dns.org/dns-query,"DoH, DoT",无过滤,Yes,未知,自有,"无过滤，QNAME最小化，DNSSEC"
+W3C TAG,https://dns.w3ctag.org/dns-query,"DoH, DoT",无过滤,No,未知,未知,
+YunZheng LAB DNS,https://dns.yunzheng.space/dns-query,"DoH, DoT, DoQ",无过滤,Yes,是,自有,"Anycast，DNSSEC，无日志"
+YunZheng LAB DNS,https://filter.dns.yunzheng.space/dns-query,"DoH, DoT, DoQ","广告过滤, 跟踪器, 恶意软件",Yes,是,自有,"过滤版本"
+zdn.ro,https://zdn.ro/dns-query,"DoH, DoT, DoQ",广告过滤,No,未知,Cloudflare,"使用Cloudflare上游，AdGuard"
+4NetGuides,https://ns2.4netguides.org/dns-query,"DoH, DoT",广告过滤,No,未知,自有,广告过滤
+@null31,https://ibuki.cgnat.net/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"巴西，无日志，Oracle Cloud"
+@publicarray dns.seby.io,https://doh.seby.io/dns-query,"DoH, DoT",无过滤,Yes,是,自有,"澳大利亚，OpenNIC，无日志"

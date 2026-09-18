@@ -1,97 +1,86 @@
 package main
 
 import (
-	"encoding/base64"
-	"fmt"
-	"io"
+	"context"
+	"errors"
 	"log/slog"
-	"net/http"
 	"time"
 
 	"github.com/miekg/dns"
 )
 
+// Resolver forwards queries to a primary upstream and falls back to a second
+// one when the primary is unreachable.
 type Resolver struct {
-	primary  string
-	fallback string
-	client   *http.Client
+	primary  Upstream
+	fallback Upstream
+	timeout  time.Duration
 }
 
-func NewResolver(primary, fallback string, timeout time.Duration) *Resolver {
+func NewResolver(primary, fallback Upstream, timeout time.Duration) *Resolver {
 	return &Resolver{
 		primary:  primary,
 		fallback: fallback,
-		client:   &http.Client{Timeout: timeout},
+		timeout:  timeout,
 	}
 }
 
-func dohExchange(client *http.Client, upstream string, msg *dns.Msg) (*dns.Msg, error) {
-	origID := msg.Id
-	msg.Id = 0
-
-	packed, err := msg.Pack()
-	if err != nil {
-		msg.Id = origID
-		return nil, fmt.Errorf("pack: %w", err)
+// Close releases the connections held by the upstreams.
+func (r *Resolver) Close() error {
+	if r.primary != nil {
+		_ = r.primary.Close()
 	}
-
-	b64 := base64.RawURLEncoding.EncodeToString(packed)
-
-	req, err := http.NewRequest("GET", upstream+"?dns="+b64, nil)
-	if err != nil {
-		msg.Id = origID
-		return nil, fmt.Errorf("new request: %w", err)
+	if r.fallback != nil {
+		_ = r.fallback.Close()
 	}
-	req.Header.Set("Accept", "application/dns-message")
-
-	resp, err := client.Do(req)
-	if err != nil {
-		msg.Id = origID
-		return nil, fmt.Errorf("do: %w", err)
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		msg.Id = origID
-		return nil, fmt.Errorf("read body: %w", err)
-	}
-
-	if resp.StatusCode != http.StatusOK {
-		msg.Id = origID
-		return nil, fmt.Errorf("status %d: %s", resp.StatusCode, string(body))
-	}
-
-	r := new(dns.Msg)
-	if err := r.Unpack(body); err != nil {
-		msg.Id = origID
-		return nil, fmt.Errorf("unpack: %w", err)
-	}
-
-	r.Id = origID
-	return r, nil
+	return nil
 }
 
+// Exchange resolves msg using the configured upstreams.
 func (r *Resolver) Exchange(msg *dns.Msg) (*dns.Msg, error) {
-	start := time.Now()
+	return r.ExchangeContext(context.Background(), msg)
+}
 
-	resp, err := dohExchange(r.client, r.primary, msg)
+// ExchangeContext is Exchange with a caller supplied context, e.g. for ECH
+// refresh requests. Every upstream attempt gets its own timeout.
+func (r *Resolver) ExchangeContext(ctx context.Context, msg *dns.Msg) (*dns.Msg, error) {
+	resp, err := r.exchange(ctx, r.primary, msg)
 	if err == nil {
-		slog.Debug("upstream resolved", "rtt", time.Since(start), "answers", len(resp.Answer), "upstream", r.primary)
 		return resp, nil
+	}
+
+	if r.fallback == nil {
+		return nil, err
 	}
 
 	slog.Warn("primary upstream failed", "error", err, "upstream", r.primary)
 
-	if r.fallback != "" {
-		start = time.Now()
-		resp, err = dohExchange(r.client, r.fallback, msg)
-		if err == nil {
-			slog.Debug("fallback resolved", "rtt", time.Since(start), "answers", len(resp.Answer), "upstream", r.fallback)
-			return resp, nil
-		}
-		slog.Warn("fallback upstream also failed", "error", err, "upstream", r.fallback)
+	resp, err = r.exchange(ctx, r.fallback, msg)
+	if err == nil {
+		return resp, nil
 	}
+	slog.Warn("fallback upstream also failed", "error", err, "upstream", r.fallback)
 
 	return nil, err
+}
+
+func (r *Resolver) exchange(ctx context.Context, upstream Upstream, msg *dns.Msg) (*dns.Msg, error) {
+	if upstream == nil {
+		return nil, errors.New("no upstream configured")
+	}
+
+	if r.timeout > 0 {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, r.timeout)
+		defer cancel()
+	}
+
+	start := time.Now()
+	resp, err := upstream.Exchange(ctx, msg)
+	if err != nil {
+		return nil, err
+	}
+
+	slog.Debug("upstream resolved", "rtt", time.Since(start), "answers", len(resp.Answer), "upstream", upstream)
+	return resp, nil
 }

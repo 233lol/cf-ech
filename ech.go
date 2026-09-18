@@ -4,7 +4,6 @@ import (
 	"context"
 	"log/slog"
 	"math/rand"
-	"net/http"
 	"sync"
 	"time"
 
@@ -14,13 +13,13 @@ import (
 type ECHCache struct {
 	mu       sync.RWMutex
 	ech      []byte
-	upstream string
+	resolver *Resolver
 	interval time.Duration
 }
 
-func NewECHCache(upstream string, interval time.Duration) *ECHCache {
+func NewECHCache(resolver *Resolver, interval time.Duration) *ECHCache {
 	return &ECHCache{
-		upstream: upstream,
+		resolver: resolver,
 		interval: interval,
 	}
 }
@@ -48,10 +47,9 @@ func (c *ECHCache) fetch() {
 	msg.SetQuestion("cloudflare-ech.com.", dns.TypeHTTPS)
 	msg.RecursionDesired = true
 
-	client := &http.Client{Timeout: 10 * time.Second}
-	r, err := dohExchange(client, c.upstream, msg)
+	r, err := c.resolver.Exchange(msg)
 	if err != nil {
-		slog.Error("failed to fetch ECH from upstream", "error", err, "upstream", c.upstream)
+		slog.Error("failed to fetch ECH from upstream", "error", err)
 		return
 	}
 

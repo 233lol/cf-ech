@@ -1,5 +1,6 @@
 # Go 编译产物
 cf-ech
+/dnsspeed
 *.exe
 *.exe~
 *.dll
